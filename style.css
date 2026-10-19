@@ -1,0 +1,51 @@
+/* Thiết lập chung cho trang web */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Định dạng chung cho cả ba thẻ card */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin: 20px auto; /* Căn giữa và tạo khoảng cách các cạnh ngoài */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Thẻ đầu tiên: content-box (mặc định) */
+.card:nth-child(2) { /* Lưu ý: h2 là phần tử đầu tiên nên thẻ card đầu tiên nằm ở child thứ 2 */
+    box-sizing: content-box;
+    background-color: #2ecc71; /* Màu xanh lá cây */
+}
+
+/* Thẻ thứ hai: border-box */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #f1c40f; /* Màu vàng */
+}
+
+/* Thẻ thứ ba: border-box */
+.card:nth-child(4) {
+    box-sizing: border-box;
+    background-color: #e74c3c; /* Màu đỏ */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.card p {
+    color: #fff;
+    font-size: 16px;
+}
